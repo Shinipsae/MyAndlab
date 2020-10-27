@@ -1,4 +1,7 @@
-package kr.hs.emirim.s2019s13.myandlab
+import kr.hs.emirim.s2019s13.myandlab.Fourbutton2Activity
+import kr.hs.emirim.s2019s13.myandlab.FourbuttonActivity
+import kr.hs.emirim.s2019s13.myandlab.R
+import kr.hs.emirim.s2019s13.myandlab.ch04widget.CalActivity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         mButton2 = findViewById(R.id.button2)
 
         mButton1.setOnClickListener {
+            //Intent intent = new Intent(this, MainActivity.class)
             startActivity(Intent(this, FourbuttonActivity::class.java))
         }
 
@@ -30,6 +34,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, Fourbutton2Activity::class.java))
         }
 
+        findViewById<Button>(R.id.button3).setOnClickListener{
+            startActivity(Intent(this, CalActivity::class.java))
+        }
+
     }
-    
+
 }
